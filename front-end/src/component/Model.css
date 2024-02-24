@@ -1,0 +1,56 @@
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Updated width to 50% */
+  max-width: 400px; /* Added max-width to maintain readability on larger screens */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.no-button button,
+.delete-button button {
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.no-button button {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.no-button button:hover {
+  background-color: #da190b; /* Darker Red */
+}
+
+.delete-button button {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.delete-button button:hover {
+  background-color: #45a049; /* Darker Green */
+}
