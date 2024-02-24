@@ -27,20 +27,22 @@ npm install
 Start the development server:
 
 npm run dev
-
+```
 ### Back-End Setup
 Navigate to the back-end directory:
 
 cd backend
 
 Install the necessary dependencies:
-
+```
 npm install
 
 Start the back-end server:
 
 npm run server
-
+```
+### System Design 
+![WhatsApp Image 2024-02-23 at 11 19 58 PM](https://github.com/ShuaibAli1/FullStackNoteTakingApp/assets/86406600/994bb07a-8573-46d6-be38-0b74b08d1918)
 
 Usage:
 The front-end part of the app can be accessed in a web browser at the address provided by the development server output.
@@ -52,6 +54,9 @@ By following these instructions, you should have both the front-end and back-end
 
 
 This README.md content is structured to guide users through the process of setting up both the front-end and back-end environments of a note-taking application, detailing each step in a clear and concise manner.
+
+
+
 
 
 
