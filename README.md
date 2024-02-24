@@ -28,7 +28,7 @@ Start the development server:
 
 npm run dev
 
-**### Back-End Setup**
+### Back-End Setup
 Navigate to the back-end directory:
 
 cd backend
