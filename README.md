@@ -42,7 +42,7 @@ Start the back-end server:
 npm run server
 ```
 ### System Design 
-![WhatsApp Image 2024-02-23 at 11 19 58 PM](https://github.com/ShuaibAli1/FullStackNoteTakingApp/assets/86406600/994bb07a-8573-46d6-be38-0b74b08d1918)
+![image](https://github.com/ShuaibAli1/FullStackNoteTakingApp/assets/86406600/994bb07a-8573-46d6-be38-0b74b08d1918)
 
 Usage:
 The front-end part of the app can be accessed in a web browser at the address provided by the development server output.
