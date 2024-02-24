@@ -1,6 +1,9 @@
+// App.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "./component/Modal";
+import NoteForm from "./component/NoteForm";
+import NoteList from "./component/NoteList";
 import "./index.css";
 
 function App() {
@@ -20,7 +23,7 @@ function App() {
       setNotes(response.data);
     } catch (error) {
       console.error("Error fetching notes:", error);
-      setNotes([]); // Set notes to an empty array in case of error
+      setNotes([]);
     }
   };
 
@@ -97,45 +100,14 @@ function App() {
   return (
     <div className="App">
       <h1>Notes</h1>
-      <div className="form">
-        <input
-          type="text"
-          placeholder="Title"
-          value={newNote.title}
-          onChange={(e) => setNewNote({ ...newNote, title: e.target.value })}
-          required
-        />
-        <textarea
-          placeholder="Content"
-          value={newNote.content}
-          onChange={(e) => setNewNote({ ...newNote, content: e.target.value })}
-        ></textarea>
-        {updatingNoteId ? (
-          <button onClick={saveUpdatedNote}>Update Note</button>
-        ) : (
-          <button onClick={addNote}>Add Note</button>
-        )}
-      </div>
-      <div className="note-list">
-        {notes.map((note) => (
-          <div
-            key={note.id}
-            className="note"
-            style={{ backgroundColor: note.color }}
-          >
-            <h3 style={{ color: "white" }}>{note.title}</h3>
-            <p style={{ color: "white" }}>{note.content}</p>
-            <div className="button-group">
-              <div className="delete">
-                <button onClick={() => deleteNote(note.id)}>Delete</button>
-              </div>
-              <div className="update">
-                <button onClick={() => updateNote(note.id)}>Update</button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <NoteForm
+        newNote={newNote}
+        setNewNote={setNewNote}
+        addNote={addNote}
+        saveUpdatedNote={saveUpdatedNote}
+        updatingNoteId={updatingNoteId}
+      />
+      <NoteList notes={notes} deleteNote={deleteNote} updateNote={updateNote} />
       <Modal
         isOpen={showModal}
         onCancel={cancelDeleteNote}
